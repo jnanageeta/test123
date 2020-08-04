@@ -1,0 +1,48 @@
+{
+	"info": {
+		"_postman_id": "3af75ce4-06f6-4b0f-b143-66b04d559945",
+		"name": "ms arch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ms",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3d7c82a2-c7ec-43fe-ba6f-1b1d54a7ac07",
+						"exec": [
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"token\");\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://run.mocky.io/v3/1ca98b65-a1cb-406c-9576-99cf63b42f05",
+					"protocol": "https",
+					"host": [
+						"run",
+						"mocky",
+						"io"
+					],
+					"path": [
+						"v3",
+						"1ca98b65-a1cb-406c-9576-99cf63b42f05"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
